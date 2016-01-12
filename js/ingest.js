@@ -12,7 +12,6 @@ var ingest = {
 		specs.flatData = [];
 
 		specs.data.forEach(function(dD,iD){
-			console.log(specs.dateCol)
 			//Splits the date object to account for weird FRED formatting
 			var dateObj = new Date(dD[specs.dateCol].split('-'));
 
@@ -30,6 +29,14 @@ var ingest = {
 
 			specs.keys.forEach(function(dC,iC){
 				var thisValue = dD[dC];
+
+				//Turn undefined values into blanks for now.
+				if(typeof thisValue == "undefined"){
+					// console.log(specs.file + " " + dC + " " + dD[dC] + " " + dD.date + " was undefined and has been replaced with a blank for now");
+					thisValue = "";
+				}
+
+
 				if(thisValue.search(/([A-Z]|[_,!@#$%^&*();\/"'])/g)==-1){
 					specs.flatData.push({
 						date: dD[specs.dateCol],
