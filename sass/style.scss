@@ -1,0 +1,128 @@
+
+#charts {
+	.axis {
+		path {
+		  fill:none;
+	  }
+		line {
+		   stroke-width: 0.5px;
+		   stroke: black;
+		}
+		text {
+			font-weight: 100;
+			font-size: 80%;
+		}
+	}
+
+	svg {
+		outline: 1px dashed grey;
+	}
+
+	div {
+		outline: 3px solid yellow;
+		div {
+			outline: 2px solid pink;
+			div {
+				outline: 1px solid purple;
+			}
+		}
+	}
+
+	h3 {
+		color:darkgrey;
+		font-family:Bookman Old Style;
+	}
+
+	.viz {
+
+		$online: 2;
+		$offline: 0.5;
+
+		path {
+			fill: none;
+			stroke-width:$offline;
+			stroke: grey;
+			opacity: 0.2;
+			&.unitedstates {
+				stroke:#0079ae;
+				stroke-width:$online;
+				opacity:1;
+			}
+			&.unitedkingdom {
+				stroke: #0098db;
+				stroke-width:$online;
+				opacity:1;
+			}
+			&.italy {
+				stroke:#95cbee;
+				stroke-width:$online;
+				opacity:1;
+			}
+			&.japan {
+				stroke: #c9e2f5;
+				stroke-width:$online;
+				opacity:1;
+			}
+			&.germany {
+				stroke: #a2d292;
+				stroke-width:$online;
+				opacity:1;
+			}
+			&.spain {
+				stroke: #63bc51;
+				stroke-width:$online;
+				opacity:1;
+			}
+			// &.brazil {
+			// 	stroke: #e29320;
+			// 	stroke-width:$online;
+			// 	opacity:1;
+			// }
+			// &.russia {
+			// 	stroke: #f9a224;
+			// 	stroke-width:$online;
+			// 	opacity:1;
+			// }
+			// &.india {
+			// 	stroke: #ffd63d;
+			// 	stroke-width:$online;
+			// 	opacity:1;
+			// }
+			// &.china {
+			// 	stroke: #ee3a43;
+			// 	stroke-width:$online;
+			// 	opacity:1;
+			// }
+			// &.southafrica {
+			// 	stroke: #ce3139;
+			// 	stroke-width:$online;
+			// 	opacity:1;
+			// }
+			&.on{
+				stroke-width:3;
+				opacity:1;
+			}
+			&.videotapeanddiscrental {
+				stroke: #ee3a43;
+			}
+
+
+
+		}
+
+
+
+	}
+
+}
+
+.tooltip {
+	font-weight: 600;
+	font-size:130%;
+    paint-order: stroke;
+    stroke: white;
+    stroke-width: 4px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+
+}
