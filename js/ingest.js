@@ -11,7 +11,8 @@ var ingest = {
 	startDate: function(specs){
 		var startDate = new Date(1992,1,1);
 		specs.data = specs.data.filter(function(d,i){
-			return (new Date(d.date))>=startDate;
+			var thisDate = new Date(d.date);
+			return ((thisDate)>=startDate && thisDate <= new Date());
 		})
 	},
 	unpivot: function(specs){

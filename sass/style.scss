@@ -64,10 +64,10 @@
 				//This here is just the default fill, better ones are set farther down
 				fill:black;
 				path {
-					opacity:0.5;
+					opacity:1;
 					stroke-width:0;
 					&:hover {
-						opacity:1;
+						opacity:0.5;
 						stroke-width:1;
 						stroke:white;
 					}

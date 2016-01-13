@@ -63,8 +63,8 @@ var allCharts = {
 			y:d3.svg.axis()
 				.scale(specs.scale.y)
 				.orient('left')
+				.ticks(specs.dates.length)
 		}
-
 	},
 	callAxis: function(specs,chartType){
 		specs[chartType].dom.canvas.select('.axis.x')

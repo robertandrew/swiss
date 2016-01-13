@@ -47,8 +47,8 @@ var simpleFever = {
 	setScale: function(specs){
 		specs.scale = {
 			x:d3.time.scale()
-				.domain([d3.min(specs.flatData,function(d,i){
-					return d.dateObj }), new Date()])
+				.domain(d3.extent(specs.dates,function(d,i){
+					return new Date(d)}))
 				.range([0,specs.width]),
 			y:d3.scale.linear()
 				.domain(d3.extent(specs.flatData,function(d,i){return d.value}))
