@@ -1,6 +1,6 @@
 
 #charts {
-	.axis {
+	.axis, .counts {
 		path {
 		  fill:none;
 	  }
@@ -49,6 +49,11 @@
 			}
 		}
 	}
+	.counts text {
+		font-weight:100;
+		font-size:60%;
+
+	}
 	.vertStream {
 
 		/* - Narrow desktop view lg - */
@@ -72,13 +77,13 @@
 				fill:#bb2b77
 			}
 			.southamerica {
-				fill:#ffd63d
+				fill:#63bc51
 			}
 			.europe {
 				fill:#bfbfbf
 			}
 			.africa {
-				fill:#63bc51
+				fill:#ffD63D
 			}
 			.asia {
 				fill:#0098db

@@ -4,8 +4,15 @@ var ingest = {
 	},
 	execute: function(specs,error,data){
 		specs.data = data;
+		ingest.startDate(specs);
 		ingest.unpivot(specs);
 		ingest.nest(specs);
+	},
+	startDate: function(specs){
+		var startDate = new Date(1992,1,1);
+		specs.data = specs.data.filter(function(d,i){
+			return (new Date(d.date))>=startDate;
+		})
 	},
 	unpivot: function(specs){
 		specs.keys = d3.keys(specs.data[0]).filter(function(f){return f != specs.dateCol});
@@ -18,11 +25,53 @@ var ingest = {
 			//Splits the date object to account for weird FRED formatting
 			var dateObj = new Date(dD[specs.dateCol].split('-'));
 
-			var rankDomain = [];
+			//Aggregates from the world bnank
+			var aggregates = [{"iso3":"ARB"},
+				{"iso3":"CEB"},
+				{"iso3":"CSS"},
+				{"iso3":"EAP"},
+				{"iso3":"EAS"},
+				{"iso3":"ECA"},
+				{"iso3":"ECS"},
+				{"iso3":"EUU"},
+				{"iso3":"FCS"},
+				{"iso3":"HIC"},
+				{"iso3":"HPC"},
+				{"iso3":"LAC"},
+				{"iso3":"LCN"},
+				{"iso3":"LDC"},
+				{"iso3":"LIC"},
+				{"iso3":"LMC"},
+				{"iso3":"LMY"},
+				{"iso3":"MEA"},
+				{"iso3":"MIC"},
+				{"iso3":"MNA"},
+				{"iso3":"NAC"},
+				{"iso3":"NOC"},
+				{"iso3":"OEC"},
+				{"iso3":"OED"},
+				{"iso3":"OSS"},
+				{"iso3":"PSS"},
+				{"iso3":"SAS"},
+				{"iso3":"SSA"},
+				{"iso3":"SSF"},
+				{"iso3":"SST"},
+				{"iso3":"UMC"},
+				{"iso3":"WLD"}]
 
-			specs.keys.forEach(function(dC,iC){
-				rankDomain.push(+dD[dC])
-			})
+				if(specs.id != "reserves" && specs.id != "reservesWB"){
+					aggregates.push({"iso3":"EMU"})
+				}
+				var rankDomain = [];
+
+				aggregates.forEach(function(dAgg,iAgg){
+					specs.keys = specs.keys.filter(function(f){return f!=dAgg.iso3})
+				})
+				specs.keys.forEach(function(dC,iC){
+					rankDomain.push(+dD[dC])
+				})
+
+
 
 			rankDomain.sort(function(a,b){return d3.descending(a,b)});
 

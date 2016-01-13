@@ -1,14 +1,14 @@
 /* line 4, ../sass/style.scss */
-#charts .axis path {
+#charts .axis path, #charts .counts path {
   fill: none;
 }
 /* line 7, ../sass/style.scss */
-#charts .axis line {
+#charts .axis line, #charts .counts line {
   stroke-width: 0.5px;
   stroke: black;
 }
 /* line 11, ../sass/style.scss */
-#charts .axis text {
+#charts .axis text, #charts .counts text {
   font-weight: 100;
   font-size: 80%;
 }
@@ -30,53 +30,58 @@
   opacity: 1;
 }
 /* line 52, ../sass/style.scss */
+#charts .counts text {
+  font-weight: 100;
+  font-size: 60%;
+}
+/* line 57, ../sass/style.scss */
 #charts .vertStream {
   /* - Narrow desktop view lg - */
   /* - iPad view md - */
   /* - Responsive view sm - */
   /* - Mobile view xs - */
 }
-/* line 58, ../sass/style.scss */
+/* line 63, ../sass/style.scss */
 #charts .vertStream .viz {
   fill: black;
 }
-/* line 61, ../sass/style.scss */
+/* line 66, ../sass/style.scss */
 #charts .vertStream .viz path {
   opacity: 0.5;
   stroke-width: 0;
 }
-/* line 64, ../sass/style.scss */
+/* line 69, ../sass/style.scss */
 #charts .vertStream .viz path:hover {
   opacity: 1;
   stroke-width: 1;
   stroke: white;
 }
-/* line 71, ../sass/style.scss */
+/* line 76, ../sass/style.scss */
 #charts .vertStream .northamerica {
   fill: #bb2b77;
 }
-/* line 74, ../sass/style.scss */
+/* line 79, ../sass/style.scss */
 #charts .vertStream .southamerica {
-  fill: #ffd63d;
+  fill: #63bc51;
 }
-/* line 77, ../sass/style.scss */
+/* line 82, ../sass/style.scss */
 #charts .vertStream .europe {
   fill: #bfbfbf;
 }
-/* line 80, ../sass/style.scss */
+/* line 85, ../sass/style.scss */
 #charts .vertStream .africa {
-  fill: #63bc51;
+  fill: #ffD63D;
 }
-/* line 83, ../sass/style.scss */
+/* line 88, ../sass/style.scss */
 #charts .vertStream .asia {
   fill: #0098db;
 }
-/* line 86, ../sass/style.scss */
+/* line 91, ../sass/style.scss */
 #charts .vertStream .australia {
   fill: #727272;
 }
 
-/* line 94, ../sass/style.scss */
+/* line 99, ../sass/style.scss */
 .tooltip {
   font-weight: 600;
   font-size: 130%;

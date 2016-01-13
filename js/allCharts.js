@@ -17,7 +17,7 @@ var allCharts = {
 			.attr('class',chartType);
 
 		specs[chartType].dom.div.append('h3')
-			.text(specs.id);
+			.text(specs.description);
 
 		specs[chartType].dom.svg = specs[chartType].dom.div.append('svg');
 
@@ -48,12 +48,12 @@ var allCharts = {
 	setSize: function(specs){
 		specs.margin = {
 			top:10,
-			right:10,
+			right:40,
 			left:40,
 			bottom:20
 		};
 		specs.width = $('div#charts').width() - specs.margin.right - specs.margin.left;
-		specs.height = 553 - specs.margin.top - specs.margin.bottom;
+		specs.height = 400 - specs.margin.top - specs.margin.bottom;
 	},
 	setAxis: function(specs){
 		specs.axis = {
@@ -76,8 +76,6 @@ var allCharts = {
 	},
 	tooltip: function(specs,chartType){
 		specs[chartType].dom.viz.on('mouseover',function(d,i){
-			console.log(d)
-
 			var thisMouse = d3.mouse(this);
 
 			specs[chartType].dom.canvas.key.tooltip
@@ -95,5 +93,6 @@ var allCharts = {
 				.text('')
 				d3.select(this).classed('on',false)
 			})
+
 	}
 }

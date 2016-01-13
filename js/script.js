@@ -5,6 +5,7 @@ d3.tsv("data/" + 'specs.tsv',function(error,data){
 		transform.global.countryData = countryData;
 
 		data.forEach(function(specs){
+			console.log(specs)
 			//Get file info by splittle the filetype...
 			var fileType = specs.file.substr(specs.file.indexOf('.'));
 			specs.id = specs.file.substr(0,specs.file.indexOf('.'));
@@ -15,8 +16,8 @@ d3.tsv("data/" + 'specs.tsv',function(error,data){
 				transform.init(specs)
 				draw.init(specs,'vertStream');
 				draw.init(specs,"simpleFever")
-				draw.init(specs,"rankedFever")
-				draw.init(specs,"segmentedRankedFever")
+				// draw.init(specs,"rankedFever")
+				// draw.init(specs,"segmentedRankedFever")
 			}
 
 			//Call execute for every possile chart type
