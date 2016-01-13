@@ -33,60 +33,66 @@
   color: darkgrey;
   font-family: Bookman Old Style;
 }
-/* line 41, ../sass/style.scss */
+/* line 42, ../sass/style.scss */
 #charts .viz path {
   fill: none;
-  stroke-width: 0.5;
+  stroke-width: 2;
   stroke: grey;
   opacity: 0.2;
 }
-/* line 46, ../sass/style.scss */
-#charts .viz path.unitedstates {
-  stroke: #0079ae;
-  stroke-width: 2;
-  opacity: 1;
-}
-/* line 51, ../sass/style.scss */
-#charts .viz path.unitedkingdom {
-  stroke: #0098db;
-  stroke-width: 2;
-  opacity: 1;
-}
-/* line 56, ../sass/style.scss */
-#charts .viz path.italy {
-  stroke: #95cbee;
-  stroke-width: 2;
-  opacity: 1;
-}
-/* line 61, ../sass/style.scss */
-#charts .viz path.japan {
-  stroke: #c9e2f5;
-  stroke-width: 2;
-  opacity: 1;
-}
-/* line 66, ../sass/style.scss */
-#charts .viz path.germany {
-  stroke: #a2d292;
-  stroke-width: 2;
-  opacity: 1;
-}
-/* line 71, ../sass/style.scss */
-#charts .viz path.spain {
-  stroke: #63bc51;
-  stroke-width: 2;
-  opacity: 1;
-}
-/* line 101, ../sass/style.scss */
+/* line 48, ../sass/style.scss */
 #charts .viz path.on {
   stroke-width: 3;
   opacity: 1;
 }
-/* line 105, ../sass/style.scss */
-#charts .viz path.videotapeanddiscrental {
-  stroke: #ee3a43;
+/* line 54, ../sass/style.scss */
+#charts .vertStream {
+  /* - Narrow desktop view lg - */
+  /* - iPad view md - */
+  /* - Responsive view sm - */
+  /* - Mobile view xs - */
+}
+/* line 60, ../sass/style.scss */
+#charts .vertStream .viz {
+  fill: black;
+}
+/* line 63, ../sass/style.scss */
+#charts .vertStream .viz path {
+  opacity: 0.5;
+  stroke-width: 0;
+}
+/* line 66, ../sass/style.scss */
+#charts .vertStream .viz path:hover {
+  opacity: 1;
+  stroke-width: 1;
+  stroke: white;
+}
+/* line 75, ../sass/style.scss */
+#charts .vertStream .northamerica {
+  fill: #bb2b77;
+}
+/* line 78, ../sass/style.scss */
+#charts .vertStream .southamerica {
+  fill: #ee3a43;
+}
+/* line 81, ../sass/style.scss */
+#charts .vertStream .europe {
+  fill: #e2e3e4;
+}
+/* line 84, ../sass/style.scss */
+#charts .vertStream .africa {
+  fill: #ffd63d;
+}
+/* line 87, ../sass/style.scss */
+#charts .vertStream .asia {
+  fill: #63bc51;
+}
+/* line 90, ../sass/style.scss */
+#charts .vertStream .australia {
+  fill: #0098db;
 }
 
-/* line 119, ../sass/style.scss */
+/* line 100, ../sass/style.scss */
 .tooltip {
   font-weight: 600;
   font-size: 130%;

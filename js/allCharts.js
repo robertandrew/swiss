@@ -13,7 +13,8 @@ var allCharts = {
 
 		specs[chartType].dom.div = d3.select('#charts')
 			.append('div')
-			.attr('id',specs.id + chartType);
+			.attr('id',specs.id + chartType)
+			.attr('class',chartType);
 
 		specs[chartType].dom.div.append('h3')
 			.text(specs.id);
@@ -75,6 +76,7 @@ var allCharts = {
 	},
 	tooltip: function(specs,chartType){
 		specs[chartType].dom.viz.on('mouseover',function(d,i){
+			console.log(d)
 
 			var thisMouse = d3.mouse(this);
 

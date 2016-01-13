@@ -19,5 +19,8 @@ var draw = {
 	},
 	segmentedRankedFever: function(specs){
 		segmentedRankedFever.draw(specs);
+	},
+	vertStream: function(specs){
+		vertStream.draw(specs);
 	}
 }

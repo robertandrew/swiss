@@ -29,6 +29,7 @@
 	<script src="js/libs/d3.tip.v0.6.3.js"></script>
 
 	<script src="js/allCharts.js"></script>
+	<script src="js/vertStream.js"></script>
 	<script src="js/simpleFever.js"></script>
 	<script src="js/rankedFever.js"></script>
 	<script src="js/segmentedRankedFever.js"></script>

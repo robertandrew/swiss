@@ -11,6 +11,9 @@ var ingest = {
 		specs.keys = d3.keys(specs.data[0]).filter(function(f){return f != specs.dateCol});
 		specs.flatData = [];
 
+		//Add dates while we're in tehre
+		specs.dates = specs.data.map(function(d,i){return d[specs.dateCol]})
+
 		specs.data.forEach(function(dD,iD){
 			//Splits the date object to account for weird FRED formatting
 			var dateObj = new Date(dD[specs.dateCol].split('-'));
