@@ -14,19 +14,19 @@
 		}
 	}
 
-	svg {
-		outline: 1px dashed grey;
-	}
-
-	div {
-		outline: 3px solid yellow;
-		div {
-			outline: 2px solid pink;
-			div {
-				outline: 1px solid purple;
-			}
-		}
-	}
+	// svg {
+	// 	outline: 1px dashed grey;
+	// }
+	//
+	// div {
+	// 	outline: 3px solid yellow;
+	// 	div {
+	// 		outline: 2px solid pink;
+	// 		div {
+	// 			outline: 1px solid purple;
+	// 		}
+	// 	}
+	// }
 
 	h3 {
 		color:darkgrey;
@@ -37,8 +37,6 @@
 
 		$online: 5;
 		$offline: 2;
-
-
 		path {
 			fill: none;
 			stroke-width:$offline;
@@ -70,30 +68,26 @@
 					}
 				}
 			}
-
-
 			.northamerica {
 				fill:#bb2b77
 			}
 			.southamerica {
-				fill:#ee3a43
-			}
-			.europe {
-				fill:#e2e3e4
-			}
-			.africa {
 				fill:#ffd63d
 			}
-			.asia {
+			.europe {
+				fill:#bfbfbf
+			}
+			.africa {
 				fill:#63bc51
 			}
-			.australia {
+			.asia {
 				fill:#0098db
 			}
-
+			.australia {
+				fill:#727272
+			}
 		}
 	}
-
 
 
 
