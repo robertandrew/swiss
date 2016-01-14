@@ -82,7 +82,6 @@ var allCharts = {
 				.text(d.key)
 				.attr('x',thisMouse[0] + 5)
 				.attr('y',thisMouse[1] - 5)
-				.classed(util.classFormat(d.key),true)
 				.style('opacity',1)
 
 			d3.select(this).classed('on',true)

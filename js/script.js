@@ -1,7 +1,7 @@
 
 
 d3.tsv("data/" + 'specs.tsv',function(error,data){
-	d3.csv('data/countries.csv',function(countryError,countryData){
+	d3.tsv('data/countries.tsv',function(countryError,countryData){
 		transform.global.countryData = countryData;
 
 		data.forEach(function(specs){
@@ -14,7 +14,7 @@ d3.tsv("data/" + 'specs.tsv',function(error,data){
 				ingest.init(specs,error,data)
 				transform.init(specs)
 				draw.init(specs,'vertStream');
-				draw.init(specs,"simpleFever")
+				// draw.init(specs,"simpleFever")
 				// draw.init(specs,"rankedFever")
 				// draw.init(specs,"segmentedRankedFever")
 			}

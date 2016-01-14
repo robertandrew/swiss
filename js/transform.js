@@ -1,6 +1,6 @@
 var transform = {
 	init: function(specs){
-
+		transform.global.addOther(specs);
 	},
 	global: {
 		sort: function(specs){
@@ -25,9 +25,17 @@ var transform = {
 		},
 		scale: d3.scale.ordinal(),
 		countryData: null,
+		addOther: function(specs){
+
+			// console.log(specs.id + specs.data[0].WLD)
+			// specs.data.forEach(function(dData,iData){
+			// 	thisSum = d3.sum(dData, d3.keys(dData).forEach(function(dKey,iKey){return
+			// 		if(dKey!=0){}
+			// 	})
+			// })
+		}
 	},
 	percentStack: function(specs){
-		console.log(specs);
 		specs.itemsPerDate = [];
 		specs.dates.forEach(function(dDate,iDate){
 			thisSet = specs.flatData.filter(function(f){return f.date == dDate}).sort(function(a,b){
