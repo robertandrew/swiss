@@ -37,13 +37,16 @@ var allCharts = {
 
 		specs[chartType].dom.canvas.key.tooltip = specs[chartType].dom.canvas.key.append('text')
 			.attr('class','tooltip');
-
-
 	},
 	size: function(specs,chartType){
-		specs[chartType].dom.svg.attr('height',specs.height + specs.margin.top + specs.margin.bottom)
+		if(chartType == vertStream){
+
+		}
+		else {
+			specs[chartType].dom.svg.attr('height',specs.height + specs.margin.top + specs.margin.bottom)
 			.attr('width',specs.width + specs.margin.left + specs.margin.right);
 		specs[chartType].dom.canvas.attr('transform','translate(' + specs.margin.left + ',' + specs.margin.top + ')');
+		}
 	},
 	setSize: function(specs){
 		specs.margin = {

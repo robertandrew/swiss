@@ -52,6 +52,7 @@ var ingest = {
 
 		})
 
+		//Alert int he console log if any monkey business is going on.
 		if(JSON.stringify(problems)!="[]"){
 			console.log(specs.id + " " + JSON.stringify(problems));
 		}
@@ -64,18 +65,6 @@ var ingest = {
 	},
 
     unpivot: function(specs) {
-
-		// keys.forEach(function(dC, iC) {
-		// 	var thisIndex = specs.keys.indexOf(dC);
-		//
-		// 	//Alert if something is in the WEO keyset and not in the dataset
-		//
-		// 	if(thisIndex == -1 && dC!="date"){
-		// 		problems.push("Not in scale: " + dC + " " + ", " + (specs.data[0][dC]))
-		// 	}
-		// })
-
-
 
         specs.data.forEach(function(dD, iD) {
             if (dD[specs.dateCol] == undefined) {
